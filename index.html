@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AV CAD – Download</title>
+<style>
+:root{
+  --red:#c8102e; --red-dark:#9b0c23; --bg:#ffffff; --tint:#fdf1f2; --ink:#2a1215; --muted:#6d5558; --line:#f0d4d8;
+  color-scheme: light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#ffffff; }
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:22px;letter-spacing:.5px;color:var(--ink)}
+.logo b{background:var(--red);color:#fff;padding:2px 8px;margin-right:6px;border-radius:4px}
+nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:15px}
+nav a:hover,nav a:focus-visible{color:var(--red)}
+.hero{background:var(--red);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:72px}
+.hero h1{font-size:clamp(36px,6vw,60px);line-height:1.08;margin:0 0 16px;font-weight:800}
+.hero p{font-size:18px;max-width:46ch;margin:0 0 28px;opacity:.95}
+.btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--red);font-weight:700;font-size:18px;padding:16px 30px;border-radius:8px;text-decoration:none;border:2px solid #fff}
+.btn:hover{background:var(--tint)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.ver{display:inline-block;margin-top:14px;font-size:14px;opacity:.9}
+.card{background:#fff;color:var(--ink);border-radius:12px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.card h2{margin:0 0 4px;font-size:20px}
+.badge{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:13px;padding:3px 10px;border-radius:99px}
+.card dl{margin:18px 0 0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:15px}
+.card dt{color:var(--muted)}
+.card dd{margin:0;font-weight:600}
+section{padding:64px 0}
+section h2{font-size:30px;margin:0 0 28px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.feat{border-left:4px solid var(--red);background:var(--tint);padding:18px 20px;border-radius:0 8px 8px 0}
+.feat h3{margin:0 0 6px;font-size:17px;color:var(--red-dark)}
+.feat p{margin:0;color:var(--muted);font-size:15px}
+.cta{background:var(--tint);text-align:center;border-top:1px solid var(--line)}
+.cta .btn{background:var(--red);color:#fff;border-color:var(--red)}
+.cta .btn:hover{background:var(--red-dark)}
+footer{padding:24px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:48px}nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo"><b>AV</b>CAD</div>
+    <nav><a href="#features">Features</a><a href="#download">Download</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>AV CAD</h1>
+        <p>A schematic workspace for planning audio, video and control systems. Place devices, connect their ports and print or export your drawing.</p>
+        <a class="btn" href="https://drive.google.com/uc?export=download&id=1C4e5mBQVa_H2rz_3zFNq0HefSWnFLEgF" id="download" target="_blank" rel="noopener">Download AV CAD</a><br>
+        <span class="ver">Version <span class="v">1.1</span></span>
+      </div>
+      <div class="card">
+        <h2>AV CAD</h2>
+        <span class="badge">Version <span class="v">1.1</span></span>
+        <dl>
+          <dt>Platform</dt><dd>Windows</dd>
+          <dt>Type</dt><dd>AV schematic workspace</dd>
+          <dt>Imports</dt><dd>AutoCAD DXF files</dd>
+          <dt>Exports</dt><dd>PDF, DXF, print</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>What you can do with AV CAD</h2>
+      <div class="features">
+        <div class="feat"><h3>Import from AutoCAD</h3><p>Import DXF files exported directly from AutoCAD. They are added to your device library and ready to place on the workspace.</p></div>
+        <div class="feat"><h3>Port-to-port cabling</h3><p>Connect device ports with cables colour-coded by type: HDMI, DisplayPort, LAN, USB, audio, speaker, power and control.</p></div>
+        <div class="feat"><h3>Drawing tools</h3><p>Line, rectangle, circle, ellipse, polyline and text, with line styles, colours and widths.</p></div>
+        <div class="feat"><h3>Object snap</h3><p>Snap to endpoints, midpoints, centres and quadrants for accurate drawing.</p></div>
+        <div class="feat"><h3>Projects</h3><p>Save and reopen your work, with undo and copy and paste while you edit.</p></div>
+        <div class="feat"><h3>Print and export</h3><p>Print your schematic, export it to PDF, or export it as a DXF file.</p></div>
+        <div class="feat"><h3>Google Drive sync</h3><p>Sign in with Google to sync your model library with Google Drive.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="cta">
+    <div class="wrap">
+      <h2>Get AV CAD Version <span class="v">1.1</span></h2>
+      <a class="btn" href="https://drive.google.com/uc?export=download&id=1C4e5mBQVa_H2rz_3zFNq0HefSWnFLEgF" target="_blank" rel="noopener">Download now</a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">&copy; 2026 AV CAD. All rights reserved.</div></footer>
+<script src="version.js"></script>
+<script>
+(function(){
+  var v=String(window.AVCAD_VERSION||'').trim();
+  if(!/^[0-9][0-9A-Za-z.\-]{0,15}$/.test(v))return;
+  document.querySelectorAll('.v').forEach(function(e){e.textContent=v;});
+  document.title='AV CAD \u2013 Download Version '+v;
+})();
+</script>
+</body>
+</html>
