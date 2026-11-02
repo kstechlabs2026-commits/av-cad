@@ -64,7 +64,7 @@ footer{padding:24px 0;text-align:center;color:var(--muted);font-size:14px;border
       <div>
         <h1>AV CAD</h1>
         <p>A schematic workspace for planning audio, video and control systems. Place devices, connect their ports and print or export your drawing.</p>
-        <a class="btn" href="https://drive.google.com/uc?export=download&id=1C4e5mBQVa_H2rz_3zFNq0HefSWnFLEgF" id="download" target="_blank" rel="noopener">Download AV CAD</a><br>
+        <a class="btn dl" href="#" id="download">Download AV CAD</a><br>
         <span class="ver">Version <span class="v">1.1</span></span>
       </div>
       <div class="card">
@@ -98,7 +98,7 @@ footer{padding:24px 0;text-align:center;color:var(--muted);font-size:14px;border
   <section class="cta" id="cta">
     <div class="wrap">
       <h2>Get AV CAD Version <span class="v">1.1</span></h2>
-      <a class="btn" href="https://drive.google.com/uc?export=download&id=1C4e5mBQVa_H2rz_3zFNq0HefSWnFLEgF" target="_blank" rel="noopener">Download now</a>
+      <a class="btn dl" href="#">Download now</a>
     </div>
   </section>
 </main>
@@ -108,9 +108,17 @@ footer{padding:24px 0;text-align:center;color:var(--muted);font-size:14px;border
 <script>
 (function(){
   var v=String(window.AVCAD_VERSION||'').trim();
-  if(!/^[0-9][0-9A-Za-z.\-]{0,15}$/.test(v))return;
-  document.querySelectorAll('.v').forEach(function(e){e.textContent=v;});
-  document.title='AV CAD \u2013 Download Version '+v;
+  if(/^[0-9][0-9A-Za-z.\-]{0,15}$/.test(v)){
+    document.querySelectorAll('.v').forEach(function(e){e.textContent=v;});
+    document.title='AV CAD \u2013 Download Version '+v;
+  }
+  var link=String(window.AVCAD_DOWNLOAD||'').trim();
+  if(!link){
+    var m=location.hostname.match(/^([^.]+)\.github\.io$/i);
+    var repo=location.pathname.split('/')[1];
+    if(m&&repo){link='https://github.com/'+m[1]+'/'+repo+'/releases/latest/download/AV-CAD-Setup.exe';}
+  }
+  if(link){document.querySelectorAll('.dl').forEach(function(a){a.href=link;});}
 })();
 </script>
 </body>
